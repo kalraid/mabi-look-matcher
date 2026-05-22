@@ -10,9 +10,9 @@
 
 ## Acceptance criteria
 
-- [ ] `search(slot, server_id, query, limit)` 동작
-- [ ] mock fixture로 테스트, live는 sqlite 경로 스텁
-- [ ] 결과에 display_name, dyeable, thumbnail_url(optional)
+- [x] `search(slot, server_id, query, limit)` 동작
+- [x] mock fixture로 테스트, live는 sqlite 경로 스텁
+- [x] 결과에 display_name, dyeable, thumbnail_url(optional)
 
 ## Blocked by
 

@@ -8,6 +8,7 @@
       "slot_ids": ["body"],
       "category": "armor",
       "dyeable": false,
+      "server_ids": ["mabikr1"],
       "thumbnail_url": null
     },
     {
@@ -16,6 +17,7 @@
       "slot_ids": ["wings"],
       "category": "robe-wing",
       "dyeable": true,
+      "server_ids": ["mabikr1"],
       "thumbnail_url": null
     }
   ]
