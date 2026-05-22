@@ -9,5 +9,7 @@ build/
 data/ephemeral/
 data/*.sqlite
 node_modules/
+apps/web/.next/
+apps/web/node_modules/
 apps/web/.env
 apps/api/.env

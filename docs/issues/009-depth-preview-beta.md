@@ -10,8 +10,8 @@
 
 ## Acceptance criteria
 
-- [ ] iframe URL from config
-- [ ] 베타 배지·동기화 미지원 문구
+- [x] iframe URL from config
+- [x] 베타 배지·동기화 미지원 문구
 - [ ] (선택) save-link 연동 스파이크 결과 ADR 초안
 
 ## Blocked by

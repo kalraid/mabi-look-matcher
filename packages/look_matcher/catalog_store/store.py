@@ -71,8 +71,13 @@ class CatalogStore:
                 continue
             if item.server_ids and server_id not in item.server_ids:
                 continue
-            if q and q not in item.display_name_ko.lower():
-                if not (item.category and q in item.category.lower()):
+            if q:
+                terms = [t for t in q.split() if t]
+                name_lower = item.display_name_ko.lower()
+                cat_lower = (item.category or "").lower()
+                if terms and not all(
+                    term in name_lower or term in cat_lower for term in terms
+                ):
                     continue
             matches.append(item)
             if len(matches) >= limit:

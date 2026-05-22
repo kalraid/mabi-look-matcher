@@ -10,9 +10,9 @@ Catalog 썸네일·**Reference Image** crop에 **로컬 CLIP** **Embedding Rank*
 
 ## Acceptance criteria
 
-- [ ] mock passthrough off 시 순서 변경 테스트
-- [ ] Gemini 추가 호출 없음
-- [ ] feature flag로 MVP 경로 유지
+- [x] mock passthrough off 시 순서 변경 테스트
+- [x] Gemini 추가 호출 없음
+- [x] feature flag로 MVP 경로 유지
 
 ## Blocked by
 

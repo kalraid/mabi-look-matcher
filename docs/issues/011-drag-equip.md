@@ -10,8 +10,8 @@
 
 ## Acceptance criteria
 
-- [ ] 클릭 착용과 동일 loadout 결과
-- [ ] 모바일 fallback(클릭 유지)
+- [x] 클릭 착용과 동일 loadout 결과
+- [x] 모바일 fallback(클릭 유지)
 
 ## Blocked by
 

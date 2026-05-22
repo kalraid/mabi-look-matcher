@@ -10,10 +10,10 @@
 
 ## Acceptance criteria
 
-- [ ] 업로드 미리보기, 분석 진행 UI
-- [ ] 후보 클릭 → API/loadout 연동 스텁 또는 #002 연동
-- [ ] **Share Link**에 preset 토큰 (이미지 없음)
-- [ ] `apps/web/.env.example` 변수 사용
+- [x] 업로드 미리보기, 분석 진행 UI
+- [x] 후보 클릭 → API/loadout 연동 스텁 또는 #002 연동
+- [x] **Share Link**에 preset 토큰 (이미지 없음)
+- [x] `apps/web/.env.example` 변수 사용
 
 ## Blocked by
 

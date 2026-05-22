@@ -10,10 +10,10 @@ FastAPI가 **Analysis Run**을 받아 **Ephemeral Upload** 저장 → **Vision P
 
 ## Acceptance criteria
 
-- [ ] POST analysis/run → run_id
-- [ ] GET analysis/run/{id} → 슬롯별 status + candidates
-- [ ] `LOOK_MATCHER_PROVIDERS__MODE=mock`만 기본
-- [ ] run 종료 후 ephemeral 제거 검증 테스트
+- [x] POST analysis/run → run_id
+- [x] GET analysis/run/{id} → 슬롯별 status + candidates
+- [x] `LOOK_MATCHER_PROVIDERS__MODE=mock`만 기본
+- [x] run 종료 후 ephemeral 제거 검증 테스트
 
 ## Blocked by
 

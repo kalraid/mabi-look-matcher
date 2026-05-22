@@ -10,9 +10,9 @@
 
 ## Acceptance criteria
 
-- [ ] equip/dye 변경 시 preview 갱신
-- [ ] 슬롯 z-order가 config 우선순위와 일치
-- [ ] 썸네일 없을 때 깨지지 않음
+- [x] equip/dye 변경 시 preview 갱신
+- [x] 슬롯 z-order가 config 우선순위와 일치
+- [x] 썸네일 없을 때 깨지지 않음
 
 ## Blocked by
 
