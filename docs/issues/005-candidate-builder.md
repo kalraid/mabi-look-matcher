@@ -10,9 +10,9 @@
 
 ## Acceptance criteria
 
-- [ ] fixture hint + catalog → 슬롯당 후보 수 ≤ `candidate_limit_per_slot`
-- [ ] `none` confidence → 빈 리스트, UI 메시지용 플래그
-- [ ] **Embedding Rank** 미사용(MVP)
+- [x] fixture hint + catalog → 슬롯당 후보 수 ≤ `candidate_limit_per_slot`
+- [x] `none` confidence → 빈 리스트, UI 메시지용 플래그
+- [x] **Embedding Rank** 미사용(MVP)
 
 ## Blocked by
 
