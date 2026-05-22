@@ -1,0 +1,28 @@
+{
+  "slots": [
+    {
+      "slotId": "body",
+      "confidence": "high",
+      "silhouetteKeywords": ["미니드레스"],
+      "colorRgb": [120, 40, 180],
+      "dyeablePreferred": true,
+      "searchQueries": ["보라 미니드레스", "코르셋 드레스"]
+    },
+    {
+      "slotId": "wings",
+      "confidence": "medium",
+      "silhouetteKeywords": ["박쥐 날개"],
+      "colorRgb": [80, 20, 120],
+      "dyeablePreferred": true,
+      "searchQueries": ["박쥐 날개", "데빌 날개"]
+    },
+    {
+      "slotId": "weapon1",
+      "confidence": "none",
+      "silhouetteKeywords": [],
+      "colorRgb": null,
+      "dyeablePreferred": false,
+      "searchQueries": []
+    }
+  ]
+}

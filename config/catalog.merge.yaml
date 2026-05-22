@@ -1,0 +1,51 @@
+# Catalog Merge field precedence (ADR-0004)
+
+version: 1
+
+sources:
+  - id: sigkill
+    role: equip_truth
+  - id: labanyu
+    role: metadata
+  - id: community_dump
+    role: ids_and_internal_names
+
+field_precedence:
+  slot_ids:
+    - sigkill
+  equip_id:
+    - sigkill
+  race_gender_gates:
+    - sigkill
+  display_name_ko:
+    - labanyu
+    - sigkill
+    - community_dump
+  category:
+    - labanyu
+    - sigkill
+  description:
+    - labanyu
+  class_id:
+    - community_dump
+    - labanyu
+  internal_name:
+    - community_dump
+  thumbnail_url:
+    - sigkill
+    - labanyu
+    - community_dump
+  dyeable:
+    - sigkill
+    - labanyu
+  server_ids:
+    - sigkill
+    - labanyu
+
+merge_key:
+  primary: display_name_ko_normalized
+  secondary: class_id
+
+on_conflict:
+  action: queue_review
+  review_queue_path: data/merge_review.jsonl

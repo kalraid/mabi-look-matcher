@@ -1,0 +1,16 @@
+[
+  {
+    "equip_id": "sk-body-001",
+    "display_name_ko": "서큐버스의 옷",
+    "slot_ids": ["body"],
+    "dyeable": false,
+    "server_ids": ["mabikr1"]
+  },
+  {
+    "equip_id": "sk-wing-002",
+    "display_name_ko": "찬란한 데빌 해커의 날개",
+    "slot_ids": ["wings"],
+    "dyeable": true,
+    "server_ids": ["mabikr1"]
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "sk-body-001",
+      "display_name_ko": "서큐버스의 옷",
+      "slot_ids": [
+        "body"
+      ],
+      "equip_id": "sk-body-001",
+      "category": "armor",
+      "description": "labanyu description",
+      "class_id": 64001,
+      "internal_name": "SuccubusDress",
+      "thumbnail_url": null,
+      "dyeable": false,
+      "server_ids": [
+        "mabikr1"
+      ]
+    },
+    {
+      "id": "sk-wing-002",
+      "display_name_ko": "찬란한 데빌 해커의 날개",
+      "slot_ids": [
+        "wings"
+      ],
+      "equip_id": "sk-wing-002",
+      "category": null,
+      "description": null,
+      "class_id": 64002,
+      "internal_name": "DevilHackerWing",
+      "thumbnail_url": null,
+      "dyeable": true,
+      "server_ids": [
+        "mabikr1"
+      ]
+    }
+  ]
+}

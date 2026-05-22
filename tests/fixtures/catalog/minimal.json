@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "server_id": "mabikr1",
+  "items": [
+    {
+      "id": "item-001",
+      "display_name_ko": "서큐버스의 옷",
+      "slot_ids": ["body"],
+      "category": "armor",
+      "dyeable": false,
+      "thumbnail_url": null
+    },
+    {
+      "id": "item-002",
+      "display_name_ko": "찬란한 데빌 해커의 날개",
+      "slot_ids": ["wings"],
+      "category": "robe-wing",
+      "dyeable": true,
+      "thumbnail_url": null
+    }
+  ]
+}

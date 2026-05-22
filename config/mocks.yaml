@@ -1,0 +1,66 @@
+# Mock adapters — used when providers.mode=mock (default for dev/test)
+
+providers:
+  mode: mock
+
+vision_provider:
+  provider: mock
+  mock:
+    fixture_path: tests/fixtures/match_hints/default.json
+    latency_ms: 50
+    # Set fail_rate: 0.1 to test error UI
+    fail_rate: 0
+
+catalog:
+  provider: mock
+  mock:
+    fixture_path: tests/fixtures/catalog/minimal.json
+    latency_ms: 10
+
+catalog_sources:
+  labanyu:
+    provider: mock
+    mock:
+      fixture_dir: tests/fixtures/sources/labanyu
+  sigkill:
+    provider: mock
+    mock:
+      fixture_dir: tests/fixtures/sources/sigkill
+  community_dump:
+    provider: mock
+    mock:
+      fixture_path: tests/fixtures/sources/community_dump/items.min.json
+
+ephemeral_upload:
+  storage_backend: memory
+
+redis:
+  provider: mock
+  mock:
+    # In-process fake; no TCP
+    backend: fakeredis_compat
+    fixture_path: tests/fixtures/queue/empty.json
+
+analysis_orchestrator:
+  provider: mock
+  mock:
+    process_inline: true
+    fixture_run_states_dir: tests/fixtures/analysis_runs
+
+embedding_rank:
+  enabled: false
+  provider: mock
+  mock:
+    passthrough: true
+
+# Live overrides (providers.mode=live) — copy to .env, never commit secrets
+live:
+  vision_provider:
+    provider: gemini
+  catalog_store:
+    provider: sqlite
+  ephemeral_upload:
+    storage_backend: filesystem
+    filesystem_path: data/ephemeral
+  redis:
+    provider: redis

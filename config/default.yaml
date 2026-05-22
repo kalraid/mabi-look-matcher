@@ -1,0 +1,105 @@
+# Look Matcher — base config (override via env LOOK_MATCHER_* or .env)
+
+app:
+  name: look-matcher
+  env: development
+  log_level: INFO
+
+# External integrations default to mock in development (see mocks.yaml)
+providers:
+  mode: mock  # mock | live
+
+server_selection:
+  default_server_id: mabikr1
+  default_server_label: 류트
+  default_region: kr
+  supported_regions:
+    - kr
+  # phase 2: jp, na
+
+base_character:
+  default_race: human
+  default_gender: female
+  default_age: 20
+
+slot_coverage:
+  source: sigkill
+  # Ordered for Analysis Queue UI (core slots first)
+  priority_slot_ids:
+    - body
+    - robe
+    - wings
+    - head
+    - gloves
+    - shoes
+    - accessory1
+    - accessory2
+    - wig
+    - weapon1
+    - weapon2
+    - shield
+
+analysis:
+  candidate_limit_per_slot: 10
+  match_hint_model: gemini-2.0-flash
+  queue_poll_interval_ms: 800
+  slot_job_timeout_seconds: 120
+  run_timeout_seconds: 600
+
+catalog:
+  snapshot_path: data/catalog.snapshot.json
+  sqlite_path: data/catalog.sqlite
+  search_max_results: 15
+
+catalog_merge:
+  config_path: config/catalog.merge.yaml
+  review_queue_path: data/merge_review.jsonl
+
+ephemeral_upload:
+  max_bytes: 10485760  # 10 MiB
+  allowed_content_types:
+    - image/jpeg
+    - image/png
+    - image/webp
+  ttl_seconds: 3600
+  storage_backend: memory  # memory | filesystem (live)
+
+vision_provider:
+  provider: mock  # mock | gemini
+  gemini:
+    api_key_env: GEMINI_API_KEY
+    base_url: https://generativelanguage.googleapis.com
+    model: gemini-2.0-flash
+    timeout_seconds: 60
+    max_output_tokens: 8192
+
+embedding_rank:
+  enabled: false
+  provider: mock  # mock | local_clip (phase 2)
+
+redis:
+  url_env: REDIS_URL
+  url_default: redis://127.0.0.1:6379/0
+  analysis_queue_key_prefix: "lm:analysis:"
+
+rate_limit:
+  gemini_requests_per_minute: 15
+  analysis_runs_per_hour_per_ip: 10
+
+look_preset:
+  schema_version: 1
+  share_param: preset
+  max_encoded_length: 8000
+
+flat_preview:
+  layer_order_from: slot_coverage.priority_slot_ids
+
+depth_preview:
+  enabled: true
+  sigkill_base_url: https://mabi.sigkill.kr/charsimulator/
+  beta: true
+  sync_enabled: false
+
+cors:
+  allowed_origins:
+    - http://localhost:3000
