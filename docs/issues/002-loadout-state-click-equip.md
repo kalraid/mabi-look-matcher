@@ -10,10 +10,10 @@
 
 ## Acceptance criteria
 
-- [ ] 동일 슬롯 재착용 시 이전 dye 상태 정책이 테스트로 고정됨
-- [ ] **Dye Override**가 **Dye Hint**보다 **Flat Preview**에 우선
-- [ ] `snapshot()` → **LookPresetCodec** round-trip
-- [ ] 단위 테스트만 공개 API 사용
+- [x] 동일 슬롯 재착용 시 이전 dye 상태 정책이 테스트로 고정됨
+- [x] **Dye Override**가 **Dye Hint**보다 **effective_rgb**에 우선
+- [x] `snapshot()` → **LookPresetCodec** round-trip
+- [x] 단위 테스트만 공개 API 사용
 
 ## Blocked by
 
